@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ResponsiveApp"
+             xmlns:converters="clr-namespace:ResponsiveApp;assembly=ResponsiveApp"
+             x:Class="ResponsiveApp.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Test"/>
+            <Image x:Name="imgSource"/>
+            <!-- <Image x:Name="imgSource" Source="{Binding Image, Converter={StaticResource ByteArrayToImage}}"/>-->
+            <StackLayout x:Name="One">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Title" HorizontalOptions="Start" WidthRequest="80"/>
+                    <Entry Placeholder="Value" HorizontalOptions="FillAndExpand"/>
+                    
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Title test" HorizontalOptions="Start" WidthRequest="80"/>
+                    <Entry Placeholder="Value" HorizontalOptions="FillAndExpand"/>
+                    
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label Text="Title test" HorizontalOptions="Start" WidthRequest="80"/>
+                    <Entry Placeholder="Value" HorizontalOptions="FillAndExpand"/>
+
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
